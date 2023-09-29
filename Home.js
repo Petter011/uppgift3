@@ -39,10 +39,15 @@ export default function Home({ navigation }) {
             }}
             style={[
               styles.list,
-              { backgroundColor: index === 0 ? "blue" : "transparent" }
+              { backgroundColor: index === 1 ? "blue" : "transparent" },
             ]}
           >
-            <Text style={[styles.listText, { color: index === 0 ? "white" : "black"}]}>
+            <Text
+              style={[
+                styles.listText,
+                { color: index === 1 ? "white" : "black" },
+              ]}
+            >
               {item.text}
             </Text>
           </TouchableOpacity>
@@ -62,6 +67,7 @@ const styles = StyleSheet.create({
   listText: {
     fontSize: 20,
     padding: 20,
+    fontWeight: "bold",
   },
   list: {
     padding: 10,
@@ -70,9 +76,5 @@ const styles = StyleSheet.create({
     height: 1,
     width: "100%",
     backgroundColor: "black",
-  },
-
-  listView: {
-    backgroundColor: "blue",
   },
 });

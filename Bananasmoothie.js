@@ -20,7 +20,7 @@ export default function Banansmoothie(navigation) {
     },
     text:{
         flex: 1,
-        fontSize: 40,
+        fontSize: 45,
         alignContent: 'center'
 
 
