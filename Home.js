@@ -6,6 +6,7 @@ import {
   View,
   FlatList,
   TouchableOpacity,
+  Button,
 } from "react-native";
 
 export default function Home({ navigation }) {
@@ -14,6 +15,10 @@ export default function Home({ navigation }) {
     { id: "2", text: "Banansmoothie" },
     { id: "3", text: "Cider" },
   ];
+
+  Apelsin = ["Apelsinjuice"];
+  Cider = ["Cider"];
+  Banan = ["Banansmoothie"];
 
   const renderSeparator = () => {
     return <View style={styles.separator} />;
@@ -28,13 +33,13 @@ export default function Home({ navigation }) {
           <TouchableOpacity
             onPress={() => {
               if (item.text == "Apelsinjuice") {
-                navigation.navigate("Apelsinjuice");
+                navigation.navigate("Apelsinjuice", { Apelsin });
               }
               if (item.text == "Banansmoothie") {
-                navigation.navigate("Banansmoothie");
+                navigation.navigate("Banansmoothie", { Banan });
               }
               if (item.text == "Cider") {
-                navigation.navigate("Cider");
+                navigation.navigate("Cider", { Cider });
               }
             }}
             style={[
